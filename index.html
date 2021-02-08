@@ -1,41 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.84">
-  <style type="text/css">
-    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
+  <title>bookreader simple demo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- JS dependencies -->
+  <script src="BookReader/jquery-1.10.1.js"></script>
+  <script src="BookReader/jquery-ui-1.12.0.min.js"></script>
+  <script src="BookReader/jquery.ui.touch-punch.min.js"></script>
+  <script src="BookReader/jquery.browser.min.js"></script>
+  <script src="BookReader/dragscrollable-br.js"></script>
+  <script src="BookReader/jquery.colorbox-min.js"></script>
+
+  <!-- BookReader and plugins -->
+  <link rel="stylesheet" href="BookReader/BookReader.css"/>
+  <script src="BookReader/BookReader.js"></script>
+
+  <!-- Custom CSS overrides -->
+  <link rel="stylesheet" href="BookReader/BookReader.css"/>
 </head>
 <body>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Hello World!</b></span></h1>
-<p class="p2"><span class="s1">I'm hosted with GitHub Pages.</span></p>
-
-  instantiateBookReader(selector, extraOptions) {
-  selector = selector || '#BookReader';
-  extraOptions = extraOptions || {};
-  var options = {
-    data: [
-      [
-        { width: 800, height: 1200,
-          uri: '//archive.org/download/BookReader/img/page001.jpg' },
-      ],
-      [
-        { width: 800, height: 1200,
-          uri: '//archive.org/download/BookReader/img/page002.jpg' },
-        { width: 800, height: 1200,
-          uri: '//archive.org/download/BookReader/img/page003.jpg' },
-      ],
-      [
-        { width: 800, height: 1200,
-          uri: '//archive.org/download/BookReader/img/page004.jpg' },
-        { width: 800, height: 1200,
-          uri: '//archive.org/download/BookReader/img/page005.jpg' },
-      ]
-    ]
+  <div id="BookReader">
+      Internet Archive BookReader Demo<br/>
+      <noscript>
+      <p>
+          The BookReader requires JavaScript to be enabled. Please check that your browser supports JavaScript and that it is enabled in the browser settings.  You can also try one of the <a href="https://archive.org/details/goodytwoshoes00newyiala"> other formats of the book</a>.
+      </p>
+      </noscript>
+  </div>
+  <script type="text/javascript" src="BookReaderJSSimpleTEST.js"></script>
+  <script>
+  instantiateBookReader('#BookReader');
+  </script>
 </body>
 </html>
